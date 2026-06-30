@@ -1,0 +1,203 @@
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #9286FF;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 0;
+        }
+        .wrapper {
+            width: 100%;
+            background: linear-gradient(90deg, #575099 0%, #9286FF 100%);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+ 
+ 
+ 
+ /*  Шапка */
+        header {
+            background: linear-gradient(90deg, #995D91 0%, #FF9AF2 100%);
+            padding: 15px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+
+        .logotype {
+            width: 50px;
+            height: 50px;
+        }
+
+        .nav-menu {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .nav-btn {
+            background: white;
+            color: #000000;
+            text-align: center;
+            padding: 8px 15px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 13px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Hover эффект для меню */
+        .nav-btn:hover {
+            background: #5b66c7;
+            color: white;
+        }
+
+         .section-block {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+        }
+
+        .description-card {
+            background-color: white;
+            width: 100%;
+            border-radius: 35px;
+            padding: 40px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        /*  Основа  */
+        .main-content {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            flex-grow: 1;
+        }
+
+        /*  Фотографии  */
+        .photo-row {
+           display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 12px;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+            
+            
+        }
+
+        .photo-card {
+            aspect-ratio: 1 / 1; 
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            width: 100%;
+            
+        }
+
+        
+
+/* Подвал */
+        footer {
+            background: linear-gradient(90deg, #995D91 0%, #FF9AF2 100%);;
+            padding: 20px;
+            /* text-align: center; */
+            color: #000000;
+            font-size: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feedback-input {
+            width: 150px;
+            height: 20px;
+            background-color: #dcdcdc;
+            border: none;
+            outline: none;
+            margin-left: 5px;
+            border-radius: 3px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .social-icons img {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Ширина 1920 */
+        @media (min-width: 1024px) {
+            body {
+                padding: 40px;
+            }
+            .wrapper {
+                width: 1000px;
+                border-radius: 15px;
+            }
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 15px 40px;
+            }
+            .nav-menu {
+                grid-template-columns: repeat(4, auto);
+                gap: 15px;
+                max-width: none;
+                width: auto;
+            }
+            footer {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 15px 40px;
+            }
+            }

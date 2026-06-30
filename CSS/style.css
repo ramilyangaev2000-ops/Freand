@@ -1,0 +1,438 @@
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #9286FF;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 0;
+        }
+
+        /* Главный контейнер макета */
+        .wrapper {
+            width: 100%;
+            background: linear-gradient(90deg, #575099 0%, #9286FF 100%);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Шапка */
+        header {
+            background: linear-gradient(90deg, #995D91 0%, #FF9AF2 100%);
+            padding: 15px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+
+        .logotype {
+            width: 50px;
+            height: 50px;
+        }
+
+        .nav-menu {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .nav-btn {
+            background: white;
+            color: #000000;
+            text-align: center;
+            padding: 8px 15px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Hover эффект для меню */
+        .nav-btn:hover {
+            background: #5b66c7;
+            color: white;
+            
+        }
+
+        /* Основное меню */
+        .main-content {
+            padding: 15px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .main-image {
+            position: relative;
+            width: 100%;
+            height: 120px;
+            background: #555;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 1px solid white;
+        }
+
+        .main-flag {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .main-text {
+            position: relative;
+            z-index: 2; 
+            color: white; 
+            text-align: center; 
+            font-weight: bold; 
+            font-size: 14px; 
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.8); 
+            padding: 0 15px; 
+            max-width: 90%;
+        }
+
+        /* Информационные карточки */
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .card-pink {
+            border: 1px solid white;
+        }
+
+        /* Список народов */
+        .peoples-title {
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .peoples-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .people-btn {
+            background: white;
+            color: #000000;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .people-btn:hover {
+            background: #39b54a;
+            color: white;
+        }
+
+        /* Боковые фото-карточки */
+        .side-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .side-card {
+            position: relative;
+            width: 100%;
+            height: 120px;
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .side-card img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.6);
+            z-index: 1;
+        }
+
+        .side-card span {
+            position: relative;
+            z-index: 2;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+            padding: 0 10px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+        }
+
+        /* Hover эффект для боковых карточек */
+        .side-card:hover {
+            border-color: #ffffff;
+        }
+
+        /* Секция: О дружбе народов */
+        .friendship-section {
+            background: linear-gradient(90deg, #995D91 0%, #FF9AF2 100%);
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 15px;
+            font-weight: bold;
+            color:white;
+            margin-bottom: 10px;
+        }
+
+        .sub-card {
+            background: white;
+            border-radius: 15px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .sub-card-title {
+            font-size: 15px;
+            font-weight: bold;
+            color: #000000;
+        }
+
+        .sub-card-text {
+            font-size: 12px;
+            color: #444;
+            line-height: 1.4;
+        }
+
+        .sub-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: none;
+        }
+
+        /* Секция: О нас */
+        .about-section {
+            padding: 15px;
+        }
+
+        .about-card {
+            background: white;
+            border-radius: 0px; 
+            padding: 15px;
+            font-size: 12px;
+            line-height: 1.5;
+            color: #000000;
+        }
+
+        .about-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: none;
+        }
+
+        /* Подвал */
+        footer {
+            background: linear-gradient(90deg, #995D91 0%, #FF9AF2 100%);;
+            padding: 20px;
+            /* text-align: center; */
+            color: #000000;
+            font-size: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feedback-input {
+            width: 150px;
+            height: 20px;
+            background-color: #dcdcdc;
+            border: none;
+            outline: none;
+            margin-left: 5px;
+            border-radius: 3px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .social-icons img {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.1);
+        }
+
+        .telephone-number {
+            margin-top: 10px;
+            margin-right: 0;
+        }
+
+        /* Адаптивность */
+
+        /* Ширина 1920 */
+        @media (min-width: 1024px) {
+            body {
+                padding: 40px;
+            }
+            .wrapper {
+                width: 1000px;
+                border-radius: 15px;
+            }
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 15px 40px;
+            }
+            .nav-menu {
+                grid-template-columns: repeat(4, auto);
+                gap: 15px;
+                max-width: none;
+                width: auto;
+            }
+            .main-content {
+                grid-template-columns: 1fr 280px; /* Две колонки */
+                gap: 20px;
+                padding: 20px;
+            }
+            .side-cards {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .side-card {
+                height: 150px;
+            }
+            .sub-card {
+                flex-direction: row;
+                align-items: center;
+                gap: 20px;
+            }
+            .sub-card img {
+                display: block; /* Показываем картинки */
+                width: 120px;
+                height: 80px;
+                object-fit: cover;
+            }
+            .sub-card:nth-child(3) {
+                flex-direction: row-reverse;
+            }
+            .about-card {
+                display: flex;
+                gap: 20px;
+                align-items: center;
+            }
+            .about-card img {
+                display: block; /* Картинка "О нас" */
+                width: 180px;
+                height: 120px;
+                object-fit: cover;
+                margin-bottom: 0;
+            }
+            footer {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 15px 40px;
+            }
+        }
+
+        /* Ширина 768 */
+        @media (min-width: 501px) and (max-width: 1023px) {
+            .wrapper {
+                width: 700px;
+            }
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .nav-menu {
+                grid-template-columns: repeat(4, auto);
+                gap: 10px;
+                width: auto;
+            }
+            /* Боковые карточки перестраиваются: две в ряд, третья по центру */
+            .side-cards {
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+            }
+            .side-card:nth-child(3) {
+                grid-column: 1 / span 2;
+                width: 50%;
+                justify-self: center;
+            }
+            .sub-card {
+                flex-direction: row;
+                align-items: center;
+                gap: 15px;
+            }
+            .sub-card img {
+                display: block;
+                width: 100px;
+                height: 70px;
+                object-fit: cover;
+            }
+            .sub-card:nth-child(3) {
+                flex-direction: row-reverse;
+            }
+            footer {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        /* Ширина 320 */
+        @media (max-width: 500px) {
+            .wrapper {
+                width: 320px;
+            }
+        }
